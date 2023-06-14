@@ -10,10 +10,10 @@
     </div>
     <div>
       <img src="src/assets/homepage/ManojSreekumar.png" />
-      <container class="status"
-        ><div class="purple-square"></div>
-        <span>Currently working for Pitsolutions</span></container
-      >
+      <div class="status">
+        <div class="purple-square"></div>
+        <span>Currently working for Pitsolutions</span>
+      </div>
     </div>
   </section>
   <div class="Quote">
@@ -36,14 +36,14 @@
   gap: 10px;
   margin: 62px auto;
 
-  div:last-of-type {
+  & > div:last-of-type {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 469px;
     height: calc(386px + 37px);
   }
-  div:first-of-type {
+  & > div:first-of-type {
     width: 537px;
     height: 227px;
   }
@@ -55,11 +55,15 @@ p {
   margin: 32px 0 24px;
 }
 .status {
-  display: block;
   width: 402px;
   height: 37px;
   background: #282c33;
   border: 1px solid #abb2bf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: #abb2bf;
 }
 ///////
 ///
@@ -162,11 +166,6 @@ button:hover i::after {
   }
 }
 .status {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  color: #abb2bf;
 }
 .purple-square {
   width: 20px !important;
