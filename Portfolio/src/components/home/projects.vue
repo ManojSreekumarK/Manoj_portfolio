@@ -1,5 +1,5 @@
 <template>
-  <section class="Projects">
+  <section id="Projects">
     <div>
       <h2>
         <span>#</span>Projects
@@ -70,7 +70,7 @@
 
 <style scoped lang="scss">
 @import '@/styles/varables';
-.Projects {
+#Projects {
   max-width: $layout-col1;
   margin: 84px auto;
   & > div:nth-child(1) {
@@ -136,7 +136,6 @@
   object-fit: cover;
 }
 .wrapper {
-  border: 1px solid #abb2bf;
   transition: all 0.5s;
   position: absolute;
   width: 100%;
