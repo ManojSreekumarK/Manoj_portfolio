@@ -8,7 +8,7 @@
       </label>
       <a href="#" class="menu-item"><img src="@/assets/navbar/icons8-github.svg" alt="" /></a>
       <a href="#" class="menu-item"><img src="@/assets/navbar/icons8-linkedin.svg" alt="" /></a>
-      <a href="#" class="menu-item"><img src="@/assets/navbar/freelancer-icon .svg" alt="" /></a>
+      <a href="#" class="menu-item"><img src="@/assets/navbar/freelancer-icon.svg" alt="" /></a>
     </div>
   </div>
   <nav>
