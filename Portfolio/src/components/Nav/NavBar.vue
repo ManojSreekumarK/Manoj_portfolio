@@ -4,15 +4,15 @@
     <div class="menu">
       <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
       <label class="menu-open-button" for="menu-open">
-        <img src="src/assets/navbar/icons8-connect.svg" />
+        <img src="@/assets/navbar/icons8-connect.svg" />
       </label>
-      <a href="#" class="menu-item"><img src="src/assets/navbar/icons8-github.svg" alt="" /></a>
-      <a href="#" class="menu-item"><img src="src/assets/navbar/icons8-linkedin.svg" alt="" /></a>
-      <a href="#" class="menu-item"><img src="src/assets/navbar/freelancer-icon .svg" alt="" /></a>
+      <a href="#" class="menu-item"><img src="@/assets/navbar/icons8-github.svg" alt="" /></a>
+      <a href="#" class="menu-item"><img src="@/assets/navbar/icons8-linkedin.svg" alt="" /></a>
+      <a href="#" class="menu-item"><img src="@/assets/navbar/freelancer-icon .svg" alt="" /></a>
     </div>
   </div>
   <nav>
-    <img src="src/assets/navbar/Manoj_logo-removebg-preview.png" />
+    <img src="@/assets/navbar/Manoj_logo-removebg-preview.png" />
     <ul>
       <li>
         <a><span>#</span>home</a>
@@ -56,7 +56,7 @@
 <script setup lang="ts"></script>
 
 <style lang="scss" scoped>
-@import 'src/styles/varables';
+@import '@/styles/varables';
 nav img {
   width: 72px;
   height: 21px;

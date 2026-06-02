@@ -11,7 +11,7 @@
     <div class="hero-image">
       <logo class="hero-logo" />
       <dots class="hero-dots" />
-      <img src="src/assets/homepage/ManojSreekumar.png" />
+      <img src="@/assets/homepage/ManojSreekumar.png" />
       <div class="status">
         <div class="purple-square"></div>
         <span>Currently working for Pitsolutions</span>
@@ -32,7 +32,7 @@ import dots from '@/components/designcomponent/DotsDesign.vue'
 </script>
 
 <style lang="scss" scoped>
-@import 'src/styles/varables';
+@import '@/styles/varables';
 #hero {
   display: flex;
   align-items: center;
