@@ -1,29 +1,34 @@
 <template>
   <section id="Projects">
     <div>
-      <h2>
-        <span>#</span>Projects
-        <hr />
-      </h2>
-      <div>
-        <p>View all &#8594;</p>
-      </div>
+      <h2><span>#</span>Projects</h2>
+      <hr />
     </div>
     <div class="cards">
       <div class="card">
         <div class="card_head">
           <div class="wrapper">
-            <img src="@/assets/homepage/brandscard.png" class="cover-image" />
+            <img
+              src="@/assets/homepage/brandscard.png"
+              class="cover-image"
+              alt="project card image for brands.io"
+            />
           </div>
-          <img src="@/assets/homepage/brandslogo.svg" class="title" />
-          <img src="@/assets/homepage/brandsch.svg" class="character" />
+          <img src="@/assets/homepage/brandslogo.svg" class="title" alt="brands.io logo" />
+          <img
+            src="@/assets/homepage/brandsch.svg"
+            class="character"
+            alt="project card image for brands.io"
+          />
         </div>
         <div class="card_content">
           <header><p>html css javascript</p></header>
           <section>
             <h3>Brands.io</h3>
             <p>Exploring different brand identities dummy website</p>
-            <button class="glow-on-hover" type="button">Live &#8594;</button>
+            <a href="https://manojsreekumark.github.io/Brands/"
+              ><button class="glow-on-hover" type="button">Live &#8594;</button></a
+            >
           </section>
         </div>
       </div>
@@ -31,34 +36,54 @@
       <div class="card">
         <div class="card_head">
           <div class="wrapper">
-            <img src="@/assets/homepage/tastenowcard.png" class="cover-image" />
+            <img
+              src="@/assets/homepage/tastenowcard.png"
+              class="cover-image"
+              alt="project card image for tastenow"
+            />
           </div>
-          <img src="@/assets/homepage/Tastenowlogo.svg" class="title" />
-          <img src="@/assets/homepage/tastenowch.svg" class="character" />
+          <img src="@/assets/homepage/Tastenowlogo.svg" class="title" alt="tastenow logo" />
+          <img
+            src="@/assets/homepage/tastenowch.svg"
+            class="character"
+            alt="project card image for tastenow"
+          />
         </div>
         <div class="card_content">
           <header><p>html css javascript</p></header>
           <section>
             <h3>Taste Now</h3>
-            <p>Online Food Delivery dummy website</p>
-            <button class="glow-on-hover" type="button">Live &#8594;</button>
+            <p>Online Food Delivery multipage dummy website</p>
+            <a href="https://manojsreekumark.github.io/taste-now/">
+              <button class="glow-on-hover" type="button">Live &#8594;</button></a
+            >
           </section>
         </div>
       </div>
       <div class="card">
         <div class="card_head">
           <div class="wrapper">
-            <img src="@/assets/homepage/denticscard.png" class="cover-image" />
+            <img
+              src="@/assets/homepage/denticscard.png"
+              class="cover-image"
+              alt="project card image for dentics"
+            />
           </div>
-          <img src="@/assets/homepage/Logo.svg" class="title" />
-          <img src="@/assets/homepage/Illustration.svg" class="character" />
+          <img src="@/assets/homepage/Logo.svg" class="title" alt="dentics logo" />
+          <img
+            src="@/assets/homepage/Illustration.svg"
+            class="character"
+            alt="project card image for dentics"
+          />
         </div>
         <div class="card_content">
           <header><p>html css javascript</p></header>
           <section>
             <h3>Dentics</h3>
             <p>Dental Clinic landing page dummy website</p>
-            <button class="glow-on-hover" type="button">Live &#8594;</button>
+            <a href="https://manojsreekumark.github.io/Dentics/">
+              <button class="glow-on-hover" type="button">Live &#8594;</button>
+            </a>
           </section>
         </div>
       </div>
@@ -71,36 +96,44 @@
 <style scoped lang="scss">
 @import '@/styles/varables';
 #Projects {
-  max-width: $layout-col1;
+  width: $layout-col1;
+  max-width: $max-width;
   margin: 84px auto;
   & > div:nth-child(1) {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    @media (min-width: 570px) {
+      margin: 0 auto;
+    }
   }
   h2 {
     display: flex;
     gap: 5px;
     align-items: center;
-    hr {
-      width: 511px;
-      height: 1px;
-      border-top: 1px solid $secondary-color;
-    }
     span {
       color: $secondary-color;
     }
+  }
+  hr {
+    width: 50%;
+    height: 1px;
+    border-top: 1px solid $secondary-color;
   }
 }
 
 .cards {
   margin: 0;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .card_head {
-  width: 325px;
+  width: 255px;
   height: 300px;
   position: relative;
   display: flex;
@@ -189,8 +222,7 @@
   z-index: -1;
 }
 .card_content {
-  width: 325px;
-
+  width: 255px;
   border: 1px solid #abb2bf;
   header {
     border-bottom: 1px solid #abb2bf;

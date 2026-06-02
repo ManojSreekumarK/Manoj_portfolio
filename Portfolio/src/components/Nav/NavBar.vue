@@ -1,53 +1,36 @@
 <template>
-  <div class="share">
-    <div class="share-line"></div>
-    <div class="menu">
-      <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
-      <label class="menu-open-button" for="menu-open">
-        <img src="@/assets/navbar/icons8-connect.svg" />
-      </label>
-      <a href="#" class="menu-item"><img src="@/assets/navbar/icons8-github.svg" alt="" /></a>
-      <a href="#" class="menu-item"><img src="@/assets/navbar/icons8-linkedin.svg" alt="" /></a>
-      <a href="#" class="menu-item"><img src="@/assets/navbar/freelancer-icon.svg" alt="" /></a>
-    </div>
-  </div>
   <nav>
-    <img src="@/assets/navbar/Manoj_logo-removebg-preview.png" />
+    <div class="share">
+      <div class="share-line"></div>
+      <div class="menu">
+        <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+        <label class="menu-open-button" for="menu-open">
+          <img src="@/assets/navbar/icons8-connect.svg" alt="connect icon" />
+        </label>
+        <a href="https://github.com/ManojSreekumarK" class="menu-item"
+          ><img src="@/assets/navbar/icons8-github.svg" alt="github"
+        /></a>
+        <a href="https://www.linkedin.com/in/manoj-sreekumar" class="menu-item"
+          ><img src="@/assets/navbar/icons8-linkedin.svg" alt="linkedln"
+        /></a>
+        <a href="https://www.freelancer.in/u/manojsreekumar20?sb=t" class="menu-item"
+          ><img src="@/assets/navbar/freelancer-icon.svg" alt="freelancer"
+        /></a>
+      </div>
+    </div>
+    <img src="@/assets/navbar/Manoj_logo-removebg-preview.png" alt="Manoj logo" />
     <ul>
       <li>
-        <a><span>#</span>home</a>
+        <a href="#"><span>#</span>home</a>
       </li>
       <li>
-        <a><span>#</span>works</a>
+        <a href="#Projects"><span>#</span>works</a>
       </li>
       <li>
-        <a><span>#</span>about me</a>
+        <a href="#skills"><span>#</span>skills</a>
       </li>
       <li>
-        <a><span>#</span>contact</a>
-      </li>
-      <li>
-        <a
-          >EN
-          <svg viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line
-              x1="0.707107"
-              y1="1.29289"
-              x2="5.70711"
-              y2="6.29289"
-              stroke="#eb7132"
-              stroke-width="2"
-            />
-            <line
-              x1="4.29289"
-              y1="6.29289"
-              x2="9.29289"
-              y2="1.29289"
-              stroke="#eb7132"
-              stroke-width="2"
-            />
-          </svg>
-        </a>
+        <a href="#about"><span>#</span>about</a>
       </li>
     </ul>
   </nav>
@@ -57,13 +40,18 @@
 
 <style lang="scss" scoped>
 @import '@/styles/varables';
-nav img {
+nav > img {
   width: 72px;
   height: 21px;
+  @media (min-width: 768px) {
+    margin-left: 100px;
+  }
 }
 nav {
-  max-width: $layout-col1;
+  max-width: $max-width;
+  width: $layout-col1;
   margin: 32px auto;
+  position: relative;
 }
 span {
   color: $secondary-color;
@@ -72,7 +60,10 @@ span {
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  @media (min-width: 768px) {
+    justify-content: space-between;
+  }
   ul {
     display: flex;
     align-items: center;
@@ -88,70 +79,82 @@ li {
   position: relative;
   z-index: 0;
 }
-nav a {
-  color: #eb7132;
-  svg {
-    width: 10px;
-    height: 5px;
-  }
-  &:last-of-type {
-    display: flex;
-    align-items: center;
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    z-index: 2;
-    width: 50%;
-    height: 100%;
-    top: 0%;
-    left: 0%;
-    transform: translate(0, -50%) scaleY(0);
-    transition: transform 1s ease;
-    mix-blend-mode: difference;
+nav {
+  li > a {
+    color: #eb7132;
+    svg {
+      width: 10px;
+      height: 5px;
+    }
+    &:last-of-type {
+      display: flex;
+      align-items: center;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      width: 50%;
+      height: 100%;
+      top: 0%;
+      left: 0%;
+      transform: translate(0, -50%) scaleY(0);
+      transition: transform 1s ease;
+      mix-blend-mode: difference;
 
-    clip-path: polygon(0 70%, 100% 70%, 100% 30%, 0 30%, 0 0, 60% 0%, 60% 20%, 0% 20%);
+      clip-path: polygon(0 70%, 100% 70%, 100% 30%, 0 30%, 0 0, 60% 0%, 60% 20%, 0% 20%);
 
-    background-color: #eb7132;
-  }
-  &:hover::after {
-    transform: translate(0, 0%) scaleY(1);
-  }
-  &::before {
-    content: '';
-    position: absolute;
-    z-index: 2;
-    width: 50%;
-    height: 100%;
-    bottom: 0%;
-    right: 0%;
-    transform: translate(0, 50%) scaleY(0);
-    transition: transform 1s ease;
-    mix-blend-mode: difference;
+      background-color: #eb7132;
+    }
+    &:hover::after {
+      transform: translate(0, 0%) scaleY(1);
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      width: 50%;
+      height: 100%;
+      bottom: 0%;
+      right: 0%;
+      transform: translate(0, 50%) scaleY(0);
+      transition: transform 1s ease;
+      mix-blend-mode: difference;
 
-    clip-path: polygon(100% 30%, 0% 30%, 0% 70%, 100% 70%, 100% 100%, 40% 100%, 40% 80%, 100% 80%);
+      clip-path: polygon(
+        100% 30%,
+        0% 30%,
+        0% 70%,
+        100% 70%,
+        100% 100%,
+        40% 100%,
+        40% 80%,
+        100% 80%
+      );
 
-    background-color: #eb7132;
-  }
-  &:hover::before {
-    transform: translate(0%, 0%) scaleY(1);
-  }
-}
-@media only screen and (min-width: 1500px) {
-  nav {
-    width: 1500px;
+      background-color: #eb7132;
+    }
+    &:hover::before {
+      transform: translate(0%, 0%) scaleY(1);
+    }
   }
 }
 .share {
   position: absolute;
-  top: 0;
-  left: 40px;
+  left: 0;
+  top: -32px;
 }
 .share-line {
-  border-right: 2px solid #abb2bf;
-  height: 191px;
+  border-right: 2px solid #eb7132;
+  height: 38px;
   margin-left: 18px;
   width: 2px;
+  @media (min-width: 768px) {
+    height: 70px;
+  }
+  @media (min-width: 1024px) {
+    height: 100px;
+  }
 }
 .menu-item {
   background: #090e16;
@@ -228,8 +231,10 @@ nav a {
 }
 .menu {
   position: absolute;
-  width: 380px;
-  height: 250px;
-  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
 }
 </style>

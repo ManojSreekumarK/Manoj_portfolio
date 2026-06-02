@@ -4,8 +4,11 @@ $secondary-color: #c778dd;
 $color_1: white;
 // layouts
 
-$layout-col1: calc(87vw - 171px);
+$layout-col1: calc(100vw - 50px);
 $layout-col2: calc(87vw - 420px);
-
+$layout-col3: calc(95vw - 171px);
+$qoute-layout1: calc(100vw - 70px);
+$max-width: 1080px;
+$max-width-col2: 833px;
 $card-height: 300px;
 $card-width: 300px;

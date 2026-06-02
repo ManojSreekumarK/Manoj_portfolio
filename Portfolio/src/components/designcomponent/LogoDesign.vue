@@ -45,50 +45,50 @@ $accentColor: #c778dd;
   background: $accentColor;
   position: relative;
   &:nth-child(1) {
-    width: 51px;
+    width: 52px;
   }
   &:nth-child(2) {
-    width: 41px;
-    top: 13.6px;
+    width: 42px;
+    top: 14px;
     left: -6px;
     transform: rotate(45deg);
   }
   &:nth-child(3) {
-    width: 41px;
-    top: 41px;
+    width: 42px;
+    top: 42px;
     left: -6px;
     transform: rotate(-45deg);
   }
   &:nth-child(4) {
-    top: 54.5px;
+    top: 56px;
     width: 52px;
   }
   &:nth-child(5) {
-    width: 51px;
-    top: 24.5px;
+    width: 52px;
+    top: 25px;
     left: 29px;
   }
   &:nth-child(6) {
-    width: 43px;
+    width: 42px;
     top: -20px;
     left: 45px;
     transform: rotate(-45deg);
   }
   &:nth-child(7) {
-    width: 40.5px;
+    width: 41.5px;
     top: 8px;
     left: 45px;
     transform: rotate(45deg);
   }
   &:nth-child(8) {
-    top: -37.5px;
+    top: -37px;
     left: 30px;
     width: 52px;
   }
   span {
     position: absolute;
     display: block;
-    height: 1px;
+    height: 2px;
     width: 5px;
     box-shadow: $accentColor 0 0 5px;
     animation: animate 2s infinite ease-in-out;
